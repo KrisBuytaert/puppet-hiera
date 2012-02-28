@@ -20,39 +20,30 @@
 #
 class hiera::type {
 
-  file { '/usr/lib/ruby/site_ruby/1.8/puppet/parser/functions/hiera_array.rb':
-    ensure  => 'file',
+  File {
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    require => Package['rubygem-hiera-puppet'],
+    require => Package['rubygem-hiera-puppet', 'puppet'],
+  }
+
+  file { '/usr/lib/ruby/site_ruby/1.8/puppet/parser/functions/hiera_array.rb':
+    ensure  => 'file',
     source  => '/usr/lib/ruby/gems/1.8/gems/hiera-puppet-0.3.0/lib/puppet/parser/functions/hiera_array.rb',
   }
 
   file { '/usr/lib/ruby/site_ruby/1.8/puppet/parser/functions/hiera_hash.rb':
     ensure  => 'file',
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
-    require => Package['rubygem-hiera-puppet'],
     source  => '/usr/lib/ruby/gems/1.8/gems/hiera-puppet-0.3.0/lib/puppet/parser/functions/hiera_hash.rb',
   }
 
   file { '/usr/lib/ruby/site_ruby/1.8/puppet/parser/functions/hiera_include.rb':
     ensure  => 'file',
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
-    require => Package['rubygem-hiera-puppet'],
     source  => '/usr/lib/ruby/gems/1.8/gems/hiera-puppet-0.3.0/lib/puppet/parser/functions/hiera_include.rb',
   }
 
   file { '/usr/lib/ruby/site_ruby/1.8/puppet/parser/functions/hiera.rb':
     ensure  => 'file',
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
-    require => Package['rubygem-hiera-puppet'],
     source  => '/usr/lib/ruby/gems/1.8/gems/hiera-puppet-0.3.0/lib/puppet/parser/functions/hiera.rb',
   }
 
