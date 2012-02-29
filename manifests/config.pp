@@ -27,12 +27,11 @@ class hiera::config {
     File['/etc/puppet/hiera.yaml'] {
       source => $hiera::params::hierayaml_source,
     }
-  } else {
+  } elsif $hiera::params::hierayaml_content != '' {
     File['/etc/puppet/hiera.yaml'] {
       content => $hiera::params::hierayaml_content,
     }
   }
-
 
 }
 
