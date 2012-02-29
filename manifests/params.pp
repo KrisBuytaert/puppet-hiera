@@ -12,6 +12,10 @@
 #     param => 'value'
 #   }
 #
+# == Todo:
+#
+# * Add parameters to docs.
+#
 class hiera::params (
   $package = undef,
   $hiera_yaml_content = undef,
