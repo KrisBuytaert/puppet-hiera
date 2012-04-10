@@ -17,10 +17,15 @@
 # * Add parameters to docs.
 #
 class hiera::params (
-  $package = undef,
-  $hiera_yaml_content = undef,
+  $package             = undef,
+  $hiera_yaml_content  = undef,
   $hiera_yaml_template = undef,
-  $hiera_yaml_source = undef
+  $hiera_yaml_source   = undef,
+  $backends            = ['yaml', 'puppet'],
+  $logger              = 'console',
+  $hierarchy           = ['%{environment}', '%{domain}', '%{hostname}', 'common' ],
+  $datadir             = '/etc/puppet/hieradata',
+  $datasource          = 'data'
 ){
   ## Copy paste snippets:
   # template("${module_name}/template.erb")
