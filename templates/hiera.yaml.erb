@@ -3,12 +3,12 @@
 def print_yaml_array(field, values)
 end
 -%>
-<%= print_yaml_array "backends" scope.lookupvar("hiera::params::backends") %>
+<%= print_yaml_array "backends", scope.lookupvar("hiera::params::backends") %>
 
-<%= print_yaml_array "logger" scope.lookupvar("hiera::params::logger") %>
+<%= print_yaml_array "logger", scope.lookupvar("hiera::params::logger") %>
 
-<%= print_yaml_array "hierarchy" scope.lookupvar("hiera::params::hierarchy") %>
+<%= print_yaml_array "hierarchy", scope.lookupvar("hiera::params::hierarchy") %>
 
-<%= print_yaml_array "datadir" scope.lookupvar("hiera::params::datadir") %>
+<%= print_yaml_array "datadir", scope.lookupvar("hiera::params::datadir") %>
 
-<%= print_yaml_array "datasource" scope.lookupvar("hiera::params::datasource") %>
+<%= print_yaml_array "datasource", scope.lookupvar("hiera::params::datasource") %>
