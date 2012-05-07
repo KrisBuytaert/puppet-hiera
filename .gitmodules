@@ -1,0 +1,3 @@
+[submodule "hiera-puppet"]
+	path = hiera-puppet
+	url = git://github.com/puppetlabs/hiera-puppet.git
