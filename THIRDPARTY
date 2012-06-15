@@ -1,0 +1,14 @@
+To update to a newer version of puppet-hiera:
+
+
+# Add the new remote if you dont already have it
+git add remote puppetlabs-hiera git://github.com/puppetlabs/hiera-puppet.git
+
+# Fetch new commits (DON'T CHECKOUT OR PULL)
+git fetch puppetlabs-hiera
+
+# For checking out a specific version:
+git checkout v0.3.0 lib/
+git commit -m 'Checkout out v0.3.0 of upstream puppet-hiera'
+
+# done ;)
