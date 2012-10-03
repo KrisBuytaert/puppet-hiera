@@ -4,7 +4,5 @@
 #
 class hiera {
   include hiera::packages
-  include hiera::type
   include hiera::config
-
 }
