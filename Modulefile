@@ -1,5 +1,5 @@
 name    'KrisBuytaert-hiera'
-version '0.98.14'
+version '1.0.0'
 
 source 'https://github.com/KrisBuytaert/puppet-hiera.git'
 author 'Kris Buytaert'
